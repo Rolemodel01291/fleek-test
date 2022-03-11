@@ -41,7 +41,7 @@ export default function TabCard({ episodes }) {
                             setOpenTab(index);
                         }}
                         ripple="light"
-                        active={openTab === index ? true : false}
+                        active={openTab === index + 1 ? true : false}
                         href="tabItem"
                     >
                         {width > 768 ? `Episode${index+1}` : index + 1 }
@@ -51,7 +51,7 @@ export default function TabCard({ episodes }) {
 
             <TabContent>
                 {data?.map((item, index) => (
-                    <TabPane active={openTab === index ? true : false}>
+                    <TabPane active={openTab === index + 1 ? true : false}>
                         <H6>Id: {item.id}</H6>
                         <H6>Name: {item.name}</H6>
                         <H6>Air_Date: {item.air_date}</H6>

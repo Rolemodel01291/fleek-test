@@ -29,22 +29,15 @@ const CardDetails = () => {
                     <div className="flex justify-center flex-col flex-wrap">
                         <div className="flex grid grid-cols-1 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 mb-16 md:mb-16">
                             <div className="flex sm:mx-auto">
-                                    <div className="flex w-1/6 h-16 mx-2">
-                                        <Button
-                                            color="lightBlue"
-                                            buttonType="outline"
-                                            size="sm"
-                                            rounded={false}
-                                            block={false}
-                                            iconOnly={false}
-                                            ripple="dark"
-                                            onClick={()=>history.goBack()}
-                                        >
+                                    <div className="flex w-1/6 h-12 mx-3">
+                                        
                                             <ArrowBackIosIcon 
-                                                className="h-4 w-4" 
+                                                className="h-4 w-6 cursor-pointer text-blue-400 pt-2" 
                                                 aria-hidden="true" 
+                                                onClick={()=>history.goBack()}
                                             />
-                                        </Button>
+                                           
+                                    
                                     </div>
                                     <div className="flex w-5/6">
                                         <img className="img-fluid item-center" src={image} alt="" />

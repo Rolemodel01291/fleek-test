@@ -7,7 +7,7 @@ import Logo from 'assets/img/logo.svg';
 export default function AdminNavbar({ showSidebar, setShowSidebar }) {
     const location = useLocation();
     return (
-        <nav className="bg-light-blue-500 z-100 py-3 px-3">
+        <nav className="fixed bg-light-blue-500 z-10 py-3 px-3 top-0 md:left-0 w-full">
             <div className="container max-w-full mx-auto flex items-center justify-between md:pr-8 md:pl-10">
                 {!location.pathname.includes('details') ?  <div className="md:hidden">
                     <Button
