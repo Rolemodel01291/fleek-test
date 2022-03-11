@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { number, string, func, oneOfType, node } from 'prop-types';
 import Button from "@material-tailwind/react/Button";
-import useWindowSize  from "../@fleek/useWindowSize";
 
 
 const LEFT_PAGE = 'LEFT';
@@ -19,8 +18,7 @@ const range = (from, to, step = 1) => {
   return pool;
 };
 
-function Paginator(props) {
-  const [width, ] = useWindowSize();  
+function Paginator(props) { 
   const init = () => {
     let { totalRecords = null, pageLimit = 20, pageNeighbours = 0 } = props;
     pageLimit = typeof pageLimit === 'number' ? pageLimit : 20;
@@ -95,8 +93,6 @@ function Paginator(props) {
     const totalPages = state.totalPages;
     const currentPage = props.currentPage;
     const pageNeighbours = state.pageNeighbours; //Pages between first and middle block
-    
-    //const off = width > 1024 ? 7 : 3; //offset for mobile and screen
     const totalNumbers = state.pageNeighbours * 2 + 3; //Neigbours on both sides including first, middle and last
     const totalBlocks = totalNumbers + 2; //including left and right buttons
 

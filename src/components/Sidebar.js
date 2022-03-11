@@ -21,22 +21,22 @@ export default function Sidebar() {
 
     useEffect(() => {
         dispatch(fetchData({pageNumber, search, status, gender}));
-    }, [dispatch, search, status, gender])
+    }, [dispatch, search, status, gender, pageNumber])
 
     const handleSearch = useCallback((e)=> {
         setSearch(e.target.value);
         dispatch(setFleekSearch(e.target.value));
-    }, [search])
+    }, [dispatch])
 
     const handleStatus = useCallback((e)=> {
         setStatus(e.target.value);
         dispatch(setFleekStatus(e.target.value));
-    }, [status])
+    }, [dispatch])
 
     const handleGender = useCallback((e)=> {
         setGender(e.target.value);
         dispatch(setFleekGender(e.target.value));
-    }, [gender])
+    }, [dispatch])
 
     return (
         <>

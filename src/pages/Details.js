@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import moment from 'moment';
 import H6 from "@material-tailwind/react/Heading6";
-import Button from "@material-tailwind/react/Button";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import Tab from "../components/Tab";
 

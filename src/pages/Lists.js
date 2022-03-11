@@ -38,6 +38,7 @@ export default function Lists() {
                 totalRecords={info.count}
                 pageLimit={20}
                 pageNeighbours={1}
+                offset={offset}
                 setOffset={setOffset}
                 currentPage={currentPage}
                 setCurrentPage={onPageChange}

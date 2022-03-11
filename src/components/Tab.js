@@ -38,7 +38,7 @@ export default function TabCard({ episodes }) {
                     <TabItem  
                         onClick={(e) => {
                             e.preventDefault();
-                            setOpenTab(index);
+                            setOpenTab(index+1);
                         }}
                         ripple="light"
                         active={openTab === index + 1 ? true : false}
